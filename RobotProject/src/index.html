@@ -49,9 +49,9 @@
                 this.size = 100;
                 this.stepSize = 20;
                 this.updatePosition();
-            }
-            move(direction) {
-                const moves = { 'w': [0, -this.stepSize], 's': [0, this.stepSize], 'a': [-this.stepSize, 0], 'd': [this.stepSize, 0] };
+            
+            }move(direction) {
+                const moves = { 'w': [0, -this.stepSize], 's': [0, this.stepSize], 'a': [-this.stepSize, 0], 'd': [this.stepSize, 0], 'i': [0, -this.stepSize], 'k': [0, this.stepSize], 'j': [-this.stepSize, 0], 'l': [this.stepSize, 0] };
                 if (direction in moves) {
                     this.x += moves[direction][0];
                     this.y += moves[direction][1];
@@ -86,7 +86,12 @@
                 robot.resize(20);
             } else if (key === 'v') {
                 robot.resize(-20);
-            }
+            } else if (key == 'i' || key == 'j' || key == 'k' || key == 'l' {
+                    robot2.move(key); 
+                } else if (key == 'n') {
+                    robot2.setSize(robot2.getSize() + 20);
+                } else if (key == 'm') {
+                    robot2.setSize(robot2.getSize() -20);
         });
 
         // Focus input field when tapping the screen (for mobile users)
