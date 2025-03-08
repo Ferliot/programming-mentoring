@@ -28,7 +28,12 @@ public class Main {
                     robot.setSize(robot.getSize() + 20);
                 } else if (key == 'v') {
                     robot.setSize(robot.getSize() - 20);
-                }
+                if (key == 'i' || key == 'j' || key == 'k' || key == 'l' {
+                    robot2.move(key); 
+                } else if (key == 'n') {
+                    robot2.setSize(robot2.getSize() + 20);
+                } else if (key == 'm') {
+                    robot2.setSize(robot2.getSize() -20);
                 canvas.repaint();
 
             }
